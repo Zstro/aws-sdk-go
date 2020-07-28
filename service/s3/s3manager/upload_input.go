@@ -48,6 +48,9 @@ type UploadInput struct {
 	// The date and time at which the object is no longer cacheable.
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
+	// The forbid overwrite that is used to control that the object can be overwritten.
+	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
 

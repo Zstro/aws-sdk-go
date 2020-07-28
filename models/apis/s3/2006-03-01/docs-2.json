@@ -1218,6 +1218,17 @@
         "FilterRule$Value": null
       }
     },
+    "ForbidOverwrite": {
+      "base": null,
+      "refs": {
+        "CopyObjectOutput$ForbidOverwrite": "<p>If present, specifies the forbid overwrite that was used for the object.</p>",
+        "CopyObjectRequest$ForbidOverwrite": "<p>The forbid overwrite that is used to control that the object can be overwritten.</p>",
+        "CreateMultipartUploadOutput$ForbidOverwrite": "<p>If present, specifies the forbid overwrite that was used for the object.</p>",
+        "CreateMultipartUploadRequest$ForbidOverwrite": "<p>The forbid overwrite that is used to control that the object can be overwritten.</p>",
+        "PutObjectOutput$ForbidOverwrite": "<p>If present, specifies the forbid overwrite that was used for the object.</p>",
+        "PutObjectRequest$ForbidOverwrite": "<p>The forbid overwrite that is used to control that the object can be overwritten.</p>"
+      }
+    },
     "GetBucketAccelerateConfigurationOutput": {
       "base": null,
       "refs": {
@@ -3635,3 +3646,4 @@
     }
   }
 }
+

@@ -1593,6 +1593,11 @@
           "shape":"ObjectLockLegalHoldStatus",
           "location":"header",
           "locationName":"x-amz-object-lock-legal-hold"
+        },
+        "ForbidOverwrite": {
+          "shape":"ForbidOverwrite",
+          "location":"header",
+          "locationName":"x-uos-forbid-overwrite"
         }
       }
     },
@@ -1737,6 +1742,11 @@
           "shape":"RequestCharged",
           "location":"header",
           "locationName":"x-amz-request-charged"
+        },
+        "ForbidOverwrite": {
+          "shape":"ForbidOverwrite",
+          "location":"header",
+          "locationName":"x-uos-forbid-overwrite"
         }
       }
     },
@@ -1876,6 +1886,11 @@
           "shape":"ObjectLockLegalHoldStatus",
           "location":"header",
           "locationName":"x-amz-object-lock-legal-hold"
+        },
+        "ForbidOverwrite": {
+          "shape":"ForbidOverwrite",
+          "location":"header",
+          "locationName":"x-uos-forbid-overwrite"
         }
       }
     },
@@ -2383,6 +2398,7 @@
       ]
     },
     "FilterRuleValue":{"type":"string"},
+    "ForbidOverwrite":{"type":"boolean"},
     "GetBucketAccelerateConfigurationOutput":{
       "type":"structure",
       "members":{
@@ -5379,6 +5395,11 @@
           "shape":"RequestCharged",
           "location":"header",
           "locationName":"x-amz-request-charged"
+        },
+        "ForbidOverwrite": {
+          "shape":"ForbidOverwrite",
+          "location":"header",
+          "locationName":"x-uos-forbid-overwrite"
         }
       }
     },
@@ -5532,6 +5553,11 @@
           "shape":"ObjectLockLegalHoldStatus",
           "location":"header",
           "locationName":"x-amz-object-lock-legal-hold"
+        },
+        "ForbidOverwrite": {
+          "shape":"ForbidOverwrite",
+          "location":"header",
+          "locationName":"x-uos-forbid-overwrite"
         }
       },
       "payload":"Body"
@@ -6626,3 +6652,4 @@
     "Years":{"type":"integer"}
   }
 }
+

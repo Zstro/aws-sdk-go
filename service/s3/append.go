@@ -1,9 +1,9 @@
 package s3
 
 import (
-	"time"
-	"io"
 	"github.com/journeymidnight/aws-sdk-go/aws/request"
+	"io"
+	"time"
 )
 
 const opAppendObject = "AppendObject"

@@ -8573,6 +8573,9 @@ type CopyObjectInput struct {
 	// The date and time at which the object is no longer cacheable.
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
+	// The forbid overwrite that is used to control that the object can be overwritten.
+	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
 
@@ -8795,6 +8798,12 @@ func (s *CopyObjectInput) SetCopySourceSSECustomerKeyMD5(v string) *CopyObjectIn
 // SetExpires sets the Expires field's value.
 func (s *CopyObjectInput) SetExpires(v time.Time) *CopyObjectInput {
 	s.Expires = &v
+	return s
+}
+
+// SetForbidOverwrite sets the ForbidOverwrite field's value.
+func (s *CopyObjectInput) SetForbidOverwrite(v bool) *CopyObjectInput {
+	s.ForbidOverwrite = &v
 	return s
 }
 
@@ -9280,6 +9289,9 @@ type CreateMultipartUploadInput struct {
 	// The date and time at which the object is no longer cacheable.
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
+	// The forbid overwrite that is used to control that the object can be overwritten.
+	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
 
@@ -9437,6 +9449,12 @@ func (s *CreateMultipartUploadInput) SetExpires(v time.Time) *CreateMultipartUpl
 	return s
 }
 
+// SetForbidOverwrite sets the ForbidOverwrite field's value.
+func (s *CreateMultipartUploadInput) SetForbidOverwrite(v bool) *CreateMultipartUploadInput {
+	s.ForbidOverwrite = &v
+	return s
+}
+
 // SetGrantFullControl sets the GrantFullControl field's value.
 func (s *CreateMultipartUploadInput) SetGrantFullControl(v string) *CreateMultipartUploadInput {
 	s.GrantFullControl = &v
@@ -9565,6 +9583,9 @@ type CreateMultipartUploadOutput struct {
 	// Name of the bucket to which the multipart upload was initiated.
 	Bucket *string `locationName:"Bucket" type:"string"`
 
+	// If present, specifies the forbid overwrite that was used for the object.
+	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+
 	// Object key for which the multipart upload was initiated.
 	Key *string `min:"1" type:"string"`
 
@@ -9627,6 +9648,12 @@ func (s *CreateMultipartUploadOutput) getBucket() (v string) {
 		return v
 	}
 	return *s.Bucket
+}
+
+// SetForbidOverwrite sets the ForbidOverwrite field's value.
+func (s *CreateMultipartUploadOutput) SetForbidOverwrite(v bool) *CreateMultipartUploadOutput {
+	s.ForbidOverwrite = &v
+	return s
 }
 
 // SetKey sets the Key field's value.
@@ -20422,6 +20449,9 @@ type PutObjectInput struct {
 	// The date and time at which the object is no longer cacheable.
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
+	// The forbid overwrite that is used to control that the object can be overwritten.
+	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
 
@@ -20597,6 +20627,12 @@ func (s *PutObjectInput) SetContentType(v string) *PutObjectInput {
 // SetExpires sets the Expires field's value.
 func (s *PutObjectInput) SetExpires(v time.Time) *PutObjectInput {
 	s.Expires = &v
+	return s
+}
+
+// SetForbidOverwrite sets the ForbidOverwrite field's value.
+func (s *PutObjectInput) SetForbidOverwrite(v bool) *PutObjectInput {
+	s.ForbidOverwrite = &v
 	return s
 }
 
@@ -21029,6 +21065,9 @@ type PutObjectOutput struct {
 	// date (expiry-date) and rule ID (rule-id). The value of rule-id is URL encoded.
 	Expiration *string `location:"header" locationName:"x-amz-expiration" type:"string"`
 
+	// If present, specifies the forbid overwrite that was used for the object.
+	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+
 	// If present, indicates that the requester was successfully charged for the
 	// request.
 	RequestCharged *string `location:"header" locationName:"x-amz-request-charged" type:"string" enum:"RequestCharged"`
@@ -21074,6 +21113,12 @@ func (s *PutObjectOutput) SetETag(v string) *PutObjectOutput {
 // SetExpiration sets the Expiration field's value.
 func (s *PutObjectOutput) SetExpiration(v string) *PutObjectOutput {
 	s.Expiration = &v
+	return s
+}
+
+// SetForbidOverwrite sets the ForbidOverwrite field's value.
+func (s *PutObjectOutput) SetForbidOverwrite(v bool) *PutObjectOutput {
+	s.ForbidOverwrite = &v
 	return s
 }
 

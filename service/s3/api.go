@@ -8574,7 +8574,7 @@ type CopyObjectInput struct {
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
 	// The forbid overwrite that is used to control that the object can be overwritten.
-	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+	ForbidOverwrite *bool `location:"header" locationName:"x-amz-forbid-overwrite" type:"boolean"`
 
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
@@ -9290,7 +9290,7 @@ type CreateMultipartUploadInput struct {
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
 	// The forbid overwrite that is used to control that the object can be overwritten.
-	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+	ForbidOverwrite *bool `location:"header" locationName:"x-amz-forbid-overwrite" type:"boolean"`
 
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
@@ -9584,7 +9584,7 @@ type CreateMultipartUploadOutput struct {
 	Bucket *string `locationName:"Bucket" type:"string"`
 
 	// If present, specifies the forbid overwrite that was used for the object.
-	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+	ForbidOverwrite *bool `location:"header" locationName:"x-amz-forbid-overwrite" type:"boolean"`
 
 	// Object key for which the multipart upload was initiated.
 	Key *string `min:"1" type:"string"`
@@ -20450,7 +20450,7 @@ type PutObjectInput struct {
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
 	// The forbid overwrite that is used to control that the object can be overwritten.
-	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+	ForbidOverwrite *bool `location:"header" locationName:"x-amz-forbid-overwrite" type:"boolean"`
 
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`
@@ -21066,7 +21066,7 @@ type PutObjectOutput struct {
 	Expiration *string `location:"header" locationName:"x-amz-expiration" type:"string"`
 
 	// If present, specifies the forbid overwrite that was used for the object.
-	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+	ForbidOverwrite *bool `location:"header" locationName:"x-amz-forbid-overwrite" type:"boolean"`
 
 	// If present, indicates that the requester was successfully charged for the
 	// request.

@@ -49,7 +49,7 @@ type UploadInput struct {
 	Expires *time.Time `location:"header" locationName:"Expires" type:"timestamp"`
 
 	// The forbid overwrite that is used to control that the object can be overwritten.
-	ForbidOverwrite *bool `location:"header" locationName:"x-uos-forbid-overwrite" type:"boolean"`
+	ForbidOverwrite *bool `location:"header" locationName:"x-amz-forbid-overwrite" type:"boolean"`
 
 	// Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
 	GrantFullControl *string `location:"header" locationName:"x-amz-grant-full-control" type:"string"`

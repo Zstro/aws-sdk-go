@@ -1597,7 +1597,7 @@
         "ForbidOverwrite": {
           "shape":"ForbidOverwrite",
           "location":"header",
-          "locationName":"x-uos-forbid-overwrite"
+          "locationName":"x-amz-forbid-overwrite"
         }
       }
     },
@@ -1746,7 +1746,7 @@
         "ForbidOverwrite": {
           "shape":"ForbidOverwrite",
           "location":"header",
-          "locationName":"x-uos-forbid-overwrite"
+          "locationName":"x-amz-forbid-overwrite"
         }
       }
     },
@@ -1890,7 +1890,7 @@
         "ForbidOverwrite": {
           "shape":"ForbidOverwrite",
           "location":"header",
-          "locationName":"x-uos-forbid-overwrite"
+          "locationName":"x-amz-forbid-overwrite"
         }
       }
     },
@@ -5399,7 +5399,7 @@
         "ForbidOverwrite": {
           "shape":"ForbidOverwrite",
           "location":"header",
-          "locationName":"x-uos-forbid-overwrite"
+          "locationName":"x-amz-forbid-overwrite"
         }
       }
     },
@@ -5557,7 +5557,7 @@
         "ForbidOverwrite": {
           "shape":"ForbidOverwrite",
           "location":"header",
-          "locationName":"x-uos-forbid-overwrite"
+          "locationName":"x-amz-forbid-overwrite"
         }
       },
       "payload":"Body"
